@@ -92,15 +92,11 @@ public class Titik {
     }
 
     Titik getRefleksiX(){
-        Titik Tbaru = new Titik(this.absis, this.ordinat);
-        Tbaru.refleksiX();
-        return Tbaru;
+        return new Titik(this.absis, -this.ordinat);
     }   
 
     Titik getRefleksiY(){
-        Titik Tbaru = new Titik(this.absis, this.ordinat);
-        Tbaru.refleksiY();
-        return Tbaru;
+        return new Titik(-this.absis, this.ordinat);
         }
 }
 

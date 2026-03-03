@@ -15,6 +15,8 @@ public class Garis{
     Garis(){
         Awal = new Titik(0,0);
         Akhir = new Titik(1,1);
+        counterGaris++;
+
     }
 
     static int getCounterGaris(){
@@ -48,42 +50,43 @@ public class Garis{
     }
 
     //mencari panjang dari titik T1 sampai T2
-    double cariPanjang(Titik Awal, Titik Akhir){
+    double cariPanjang(){
         return Math.sqrt(Math.pow(Akhir.getAbsis() - Awal.getAbsis(), 2) +  Math.pow(Akhir.getOrdinat() - Awal.getOrdinat(), 2));
     }
 
     //mencari gradien suatu titik
-    double cariGradien(Titik Awal, Titik Akhir){
+    double cariGradien(){
         return (Akhir.getOrdinat() - Awal.getOrdinat())/(Akhir.getAbsis() - Awal.getAbsis());
     }
 
     //mencari titik tengah
-    Titik cariTengah(Titik Awal, Titik Akhir){
+    Titik cariTengah(){
         Titik Tmid = new Titik(((Awal.getAbsis() + Akhir.getAbsis())/2), (Awal.getOrdinat() + Akhir.getOrdinat())/2);
         return Tmid;
     }
 
     //mengecek apakah sejajar
-    boolean isSejajar(Garis G1, Garis G2){
-        return G1.cariGradien(getAwal(), getAkhir()) == G2.cariGradien(getAwal(), getAkhir());
+    boolean isSejajar(Garis G1){
+        return this.cariGradien() == G1.cariGradien();
     }
 
     //mengecek apakah tegak lurus
-    boolean isTegakLurus(Garis G1, Garis G2){
-        return G1.cariGradien(getAwal(), getAkhir()) * G2.cariGradien(getAwal(), getAkhir()) == -1;
+    boolean isTegakLurus(Garis G1){
+        return this.cariGradien() * G1.cariGradien() == -1;
     }
 
     //menampilkan titik awal dan titik akhir
-    void printGaris(Garis G){
-        System.out.println("Awal  = " + G.getAwal());
-        System.out.println("Akhir = " + G.getAkhir());
+    void printGaris(){
+        System.out.println("Awal  = " + Awal);
+        System.out.println("Akhir = " + Akhir);
     }
 
     //menampilkan persamaan garis
-    void printPersamaan(Garis G1, Garis G2){
-        //y - y1 = (y2 - y1) / (x2 - x1) * (x - x1)
-        double A1 = ((Akhir.getOrdinat() - Awal.getOrdinat()) / (Akhir.getAbsis() - Awal.getAbsis()));
-        double y = (A1 * Awal.getAbsis() - );
+    void printPersamaan(){
+        //y - y1 = m * (x - x1)
+        double m = cariGradien();
+        double c = Awal.getOrdinat() - (m * Awal.getAbsis());
+        System.out.println("Persamaan garis: y = " + m + "x + " + c);
 
     }
 }
