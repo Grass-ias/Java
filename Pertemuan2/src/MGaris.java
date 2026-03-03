@@ -32,6 +32,7 @@ public class MGaris {
 
         System.out.println("Jumlah Objek Titik yang dibuat : " + Titik.getCounterTitik());
         System.out.println("Jumlah Objek Garis yang dibuat : " + Garis.getCounterGaris());
+
         
     }
 }
