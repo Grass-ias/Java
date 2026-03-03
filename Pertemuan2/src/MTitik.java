@@ -37,5 +37,11 @@ public class MTitik {
         T1.printTitik();
         System.out.println("T3 setelah di refleksi Y");
         T3.printTitik();
+
+
+
+
+
+
     }
 }
