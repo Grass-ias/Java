@@ -9,11 +9,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public abstract class Pegawai {
-    protected String NIP;
-    protected String Nama;
-    protected LocalDate TL;
-    protected LocalDate TMT;
-    protected double GajiPokok;
+    private String NIP;
+    private String Nama;
+    private LocalDate TL;
+    private LocalDate TMT;
+    private double GajiPokok;
 
     public Pegawai() {
     }
@@ -29,7 +29,7 @@ public abstract class Pegawai {
     public String getNIP() { 
         return NIP; 
     }
-    
+
     public void setNIP(String NIP) { 
         this.NIP = NIP; 
     }
@@ -66,8 +66,9 @@ public abstract class Pegawai {
         this.GajiPokok = GajiPokok; 
     }
 
-    protected String formatTanggal(LocalDate date) {
-        if (date == null) return "-";
+    public String formatTanggal(LocalDate date) {
+        if (date == null) 
+            return "-";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", new Locale("id", "ID"));
         return date.format(formatter);
     }
