@@ -12,7 +12,7 @@ public class Mahasiswa {
     private String Nama;
     private String Prodi;
     ArrayList<MataKuliah> listMatKul;
-    private Dosen dosenwali;
+    private Dosen1 dosenwali;
     private Kendaraan kendaraan;
 
     /****************METHOD******************/
@@ -46,7 +46,7 @@ public class Mahasiswa {
         return listMatKul;
     }
 
-    public Dosen getDosen(){
+    public Dosen1 getDosen(){
         return dosenwali;
     }
 
@@ -70,7 +70,7 @@ public class Mahasiswa {
         listMatKul = matkul;
     }
 
-    public void setDosenwali(Dosen dosen){
+    public void setDosenwali(Dosen1 dosen){
         dosenwali = dosen;
     }
 
