@@ -1,23 +1,23 @@
-/* Nama File : Dosen.java 
- * Deskripsi : Berisi atribut dan method dalam class Dosen
+/* Nama File : Dosen1.java 
+ * Deskripsi : Berisi atribut dan method dalam class Dosen1
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 03/03/2026 
  */
 
-public class Dosen {
+public class Dosen1 {
     /****************ATRIBUT*****************/
     String NIP;
     String Nama;
     String Prodi;
 
     /****************METHOD******************/
-    Dosen(){
+    Dosen1(){
         NIP = "-";
         Nama = "-";
         Prodi = "-";
     }
 
-    Dosen(String x, String y, String z){
+    Dosen1(String x, String y, String z){
         this.NIP = x;
         this.Nama = y;
         this.Prodi = z;

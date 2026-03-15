@@ -8,7 +8,7 @@ public class MMahasiswa {
         MataKuliah PBO = new MataKuliah("PBO", "Pemrograman Berorientasi Objek", 3);
         MataKuliah MBD = new MataKuliah("MBD", "Manajemen Basis Data", 3);
         Mahasiswa M1 = new Mahasiswa("234", "Citra", "Informatika");
-        Dosen D1 = new Dosen("123", "Andi", "Informatika");
+        Dosen1 D1 = new Dosen1("123", "Andi", "Informatika");
         Kendaraan K1 = new Kendaraan("H6767IV", "motor");
         M1.setDosenwali(D1);
         M1.setKendaraan(K1);
