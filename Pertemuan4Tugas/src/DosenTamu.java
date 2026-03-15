@@ -39,7 +39,8 @@ public class DosenTamu extends Dosen {
     }
 
     public long getSisaKontrakBulan() {
-        if (tanggalBerakhirKontrak.isBefore(LocalDate.now())) return 0;
+        if (tanggalBerakhirKontrak.isBefore(LocalDate.now())) 
+            return 0;
         return ChronoUnit.MONTHS.between(LocalDate.now(), tanggalBerakhirKontrak);
     }
 
