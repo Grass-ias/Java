@@ -25,33 +25,33 @@ public class DosenTetap extends Dosen {
     public void setNIDN(String NIDN) { this.NIDN = NIDN; }
 
     public int getMasaKerjaTahun() {
-        return Period.between(this.TMT, LocalDate.now()).getYears();
+        return Period.between(this.getTMT(), LocalDate.now()).getYears();
     }
 
     public int getMasaKerjaBulan() {
-        return Period.between(this.TMT, LocalDate.now()).getMonths();
+        return Period.between(this.getTMT(), LocalDate.now()).getMonths();
     }
 
     public double getTunjangan() {
-        return 0.02 * getMasaKerjaTahun() * GajiPokok;
+        return 0.02 * getMasaKerjaTahun() * getGajiPokok();
     }
 
     public LocalDate getTanggalPensiun() {
-        return TL.plusYears(BUP).plusMonths(1).withDayOfMonth(1);
+        return getTanggalLahir().plusYears(BUP).plusMonths(1).withDayOfMonth(1);
     }
 
     @Override
     public void printInfo() {
-        System.out.println("NIP             : " + NIP);
-        System.out.println("NIDN            : " + NIDN);
-        System.out.println("Nama            : " + Nama);
-        System.out.println("Tanggal Lahir   : " + formatTanggal(TL));
-        System.out.println("TMT             : " + formatTanggal(TMT));
+        System.out.println("NIP             : " + this.getNIP());
+        System.out.println("NIDN            : " + this.getNIDN());
+        System.out.println("Nama            : " + this.getNama());
+        System.out.println("Tanggal Lahir   : " + formatTanggal(this.getTanggalLahir()));
+        System.out.println("TMT             : " + formatTanggal(this.getTMT()));
         System.out.println("Jabatan         : Dosen Tetap");
-        System.out.println("Fakultas        : " + Fakultas);
+        System.out.println("Fakultas        : " + this.getFakultas());
         System.out.println("Masa Kerja      : " + getMasaKerjaTahun() + " tahun " + getMasaKerjaBulan() + " bulan");
         System.out.println("Tanggal Pensiun : " + formatTanggal(getTanggalPensiun()));
-        System.out.println("Gaji Pokok      : " + GajiPokok);
-        System.out.println("Tunjangan       : 2% x " + getMasaKerjaTahun() + " x " + GajiPokok + " = " + getTunjangan());
+        System.out.println("Gaji Pokok      : " + this.getGajiPokok());
+        System.out.println("Tunjangan       : 2% x " + getMasaKerjaTahun() + " x " + this.getGajiPokok() + " = " + getTunjangan());
     }
 }
