@@ -1,5 +1,5 @@
 /* Nama File : MMahasiswa1.java 
- * Deskripsi : Berisi atribut dan method dalam class MMahasiswa
+ * Deskripsi : Program utama untuk menguji kelas Mahasiswa1
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 24/04/2026 
  */

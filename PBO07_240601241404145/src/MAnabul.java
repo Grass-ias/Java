@@ -1,5 +1,5 @@
 /* Nama File : MAnabul.java 
- * Deskripsi : Program utama untuk menguji polimorfisme kelas Anabul (Tanpa Looping)
+ * Deskripsi : Program utama untuk menguji polimorfisme kelas Anabul
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 24/04/2026  
  */
