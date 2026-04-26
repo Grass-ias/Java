@@ -1,33 +1,30 @@
 /* Nama File : Mahasiswa2.java 
- * Deskripsi : Berisi atribut dan method dalam class Mahasiswa2
+ * Deskripsi : Berisi atribut dan method dalam class Mahasiswa2 turunan CivitasAkademika
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 24/04/2026  
  */
 
 public class Mahasiswa2 extends CivitasAkademika {
-    /****************ATRIBUT*****************/
     private String NIM;
+    private Dosen2 dosenWali;
 
-    /****************METHOD******************/
-    public Mahasiswa2(){
-        NIM = "-999";
+    public Mahasiswa2(String NIM, String nama) {
+        this.NIM = NIM;
+        super.setNama(nama);
     }
 
-    public Mahasiswa2(String x){
-        this.NIM = x;
+    @Override
+    public String getNomor() {
+        return this.NIM;
     }
 
-    public String getNIM(){
-        return NIM;
+    public void setWali(Dosen2 Dosen) {
+        this.dosenWali = Dosen;
     }
 
-    public void setNIM(String x){
-        NIM = x;
-    }
-
-    public void printMhs2(){
-        System.out.println("NIM        : " + NIM);
+    public void tampilDataMahasiswa2() {
+        System.out.println("NIM        : " + this.NIM);
+        System.out.println("Nama       : " + super.getNama());
+        System.out.println("Dosen Wali : " + this.dosenWali.getNama());
     }
 }
-
-

@@ -1,5 +1,5 @@
 /* Nama File : Anjing.java 
- * Deskripsi : Berisi atribut dan method dalam class Anjing
+ * Deskripsi : Berisi atribut dan method dalam class Anjing turunan Anabul
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 24/04/2026  
  */
