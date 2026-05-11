@@ -1,5 +1,5 @@
 /* Nama File : Teman.java 
- * Deskripsi : Mengelola koleksi list nama teman murni manual (tanpa remove, contains, equals)
+ * Deskripsi : Mengelola koleksi list nama teman
  * Pembuat   : Ferdy Prasetya Putra/24060124140145
  * Tanggal   : 05/05/2026  
  */
